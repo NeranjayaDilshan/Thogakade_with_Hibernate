@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="lk.ijse.thogakade.controller.ItemController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="523.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.thogakade.controller.ItemController">
+   <children>
+      <Label alignment="CENTER" layoutX="10.0" layoutY="5.0" prefHeight="82.0" prefWidth="464.0" text="Item Form">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtItemCode" labelFloat="true" layoutX="59.0" layoutY="128.0" onAction="#txtItemCodeOnAction" prefHeight="31.0" prefWidth="292.0" promptText="Item Code" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="704.0" />
+      <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="33.0" layoutY="259.0" onAction="#txtUnitPriceOnAction" prefHeight="31.0" prefWidth="292.0" promptText="Unit Price" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="704.0" />
+      <JFXTextField fx:id="txtQtyOnHand" layoutX="56.0" layoutY="325.0" onAction="#txtQtyOnHandOnAction" prefHeight="31.0" prefWidth="292.0" promptText="Qty On Hand" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="704.0" />
+      <JFXTextField fx:id="txtItemName" labelFloat="true" layoutX="33.0" layoutY="193.0" onAction="#txtItemNameOnAction" prefHeight="31.0" prefWidth="292.0" promptText="Item Name" AnchorPane.leftAnchor="33.0" AnchorPane.rightAnchor="704.0" />
+      <JFXButton fx:id="btnSave" layoutX="324.0" layoutY="407.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #2ecc71;" text="Save" />
+      <TableView layoutX="460.0" layoutY="123.0" prefHeight="328.0" prefWidth="603.0" AnchorPane.leftAnchor="440.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="139.0">
+        <columns>
+          <TableColumn prefWidth="97.0" text="Item Code" />
+          <TableColumn prefWidth="172.0" text="Item Name" />
+            <TableColumn prefWidth="142.0" text="Unit price" />
+            <TableColumn prefWidth="117.0" text="Qty On Hand" />
+            <TableColumn prefWidth="113.0" text="Status" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearch" labelFloat="true" layoutX="803.0" layoutY="96.0" onAction="#txtSearchOnAction" prefHeight="31.0" prefWidth="291.0" promptText="Search" AnchorPane.topAnchor="86.0" />
+   </children>
 </AnchorPane>
