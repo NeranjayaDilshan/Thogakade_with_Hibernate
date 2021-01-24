@@ -6,6 +6,7 @@ import lk.ijse.thogakade.util.FactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.persistence.Query;
 import java.util.List;
 
 public class CustomerDAOImpl implements CustomerDAO {
@@ -13,13 +14,9 @@ public class CustomerDAOImpl implements CustomerDAO {
     @Override
     public boolean add(Customer customer) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
-
         Transaction transaction = session.beginTransaction();
-
         session.save(customer);
-
         transaction.commit();
-
         session.close();
         return true;
     }
@@ -59,6 +56,12 @@ public class CustomerDAOImpl implements CustomerDAO {
 
     @Override
     public List<Customer> getAll() throws Exception {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Query query = session.createQuery("from Customer");
+        List<Customer> list = query.getResultList();
+        for (Customer customer : list) {
+            System.out.println(customer);
+        }
+        return list;
     }
 }

@@ -1,36 +1,23 @@
-package lk.ijse.thogakade.entity;
+package lk.ijse.thogakade.tm;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import java.util.List;
+import javafx.scene.control.Button;
 
-@Entity
-public class Customer implements SuperEntity {
-    @Id
+public class CustomerTM {
     private String id;
     private String name;
     private String contact;
     private String address;
-    @OneToMany(mappedBy = "customer")
-    private List<Orders> orders;
+    private Button btn;
 
-    public Customer(String id, String name, String contact, String address, List<Orders> orders) {
+    public CustomerTM(String id, String name, String contact, String address, Button btn) {
         this.id = id;
         this.name = name;
         this.contact = contact;
         this.address = address;
-        this.orders = orders;
+        this.btn = btn;
     }
 
-    public Customer(String id, String name, String contact, String address) {
-        this.id = id;
-        this.name = name;
-        this.contact = contact;
-        this.address = address;
-    }
-
-    public Customer() {
+    public CustomerTM() {
     }
 
     public String getId() {
@@ -65,22 +52,22 @@ public class Customer implements SuperEntity {
         this.address = address;
     }
 
-    public List<Orders> getOrders() {
-        return orders;
+    public Button getBtn() {
+        return btn;
     }
 
-    public void setOrders(List<Orders> orders) {
-        this.orders = orders;
+    public void setBtn(Button btn) {
+        this.btn = btn;
     }
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return "CustomerTM{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", contact='" + contact + '\'' +
                 ", address='" + address + '\'' +
-                ", orders=" + orders +
+                ", btn=" + btn +
                 '}';
     }
 }

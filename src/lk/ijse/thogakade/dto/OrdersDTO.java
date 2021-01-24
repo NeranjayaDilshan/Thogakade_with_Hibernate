@@ -1,25 +1,19 @@
-package lk.ijse.thogakade.entity;
+package lk.ijse.thogakade.dto;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import java.util.Date;
 
-@Entity
-public class Orders implements SuperEntity {
-    @Id
+public class OrdersDTO {
     private String orderId;
     private Date date;
-    @ManyToOne
-    private Customer customer;
+    private  String cusID;
 
-    public Orders(String orderId, Date date, Customer customer) {
+    public OrdersDTO(String orderId, Date date, String cusID) {
         this.orderId = orderId;
         this.date = date;
-        this.customer = customer;
+        this.cusID = cusID;
     }
 
-    public Orders() {
+    public OrdersDTO() {
     }
 
     public String getOrderId() {
@@ -38,20 +32,20 @@ public class Orders implements SuperEntity {
         this.date = date;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public String getCusID() {
+        return cusID;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCusID(String cusID) {
+        this.cusID = cusID;
     }
 
     @Override
     public String toString() {
-        return "Orders{" +
+        return "OrdersDTO{" +
                 "orderId='" + orderId + '\'' +
                 ", date=" + date +
-                ", customer=" + customer +
+                ", cusID='" + cusID + '\'' +
                 '}';
     }
 }

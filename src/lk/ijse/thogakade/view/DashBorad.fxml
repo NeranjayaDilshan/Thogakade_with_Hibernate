@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane prefHeight="764.0" prefWidth="872.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.thogakade.controller.DashBoradController">
+   <children>
+      <Pane layoutX="-3.0" prefHeight="764.0" prefWidth="293.0" style="-fx-background-color: red;">
+         <children>
+            <Pane fx:id="customerpane" layoutX="34.0" layoutY="138.0" onMouseClicked="#customerpaneOnAction" prefHeight="69.0" prefWidth="200.0" style="-fx-background-color: #2ecc71;">
+               <children>
+                  <Label layoutX="31.0" layoutY="24.0" prefHeight="21.0" prefWidth="109.0" text="Customer" />
+               </children>
+            </Pane>
+            <Pane fx:id="itemPane" layoutX="34.0" layoutY="291.0" onMouseClicked="#itemPaneOnAction" prefHeight="69.0" prefWidth="200.0" style="-fx-background-color: #2ecc71;">
+               <children>
+                  <Label layoutX="36.0" layoutY="26.0" prefHeight="21.0" prefWidth="109.0" text="Item" />
+               </children>
+            </Pane>
+            <Pane fx:id="orderPane" layoutX="34.0" layoutY="451.0" onMouseClicked="#orderPaneOnAction" prefHeight="69.0" prefWidth="200.0" style="-fx-background-color: #2ecc71;">
+               <children>
+                  <Label layoutX="45.0" layoutY="24.0" prefHeight="21.0" prefWidth="109.0" text="Order" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="pane" layoutX="290.0" prefHeight="764.0" prefWidth="690.0" />
+   </children>
+</AnchorPane>

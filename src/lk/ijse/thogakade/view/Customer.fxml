@@ -8,27 +8,26 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="523.0" prefWidth="1107.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.thogakade.controller.CustomerController">
+<AnchorPane prefHeight="764.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.thogakade.controller.CustomerController">
    <children>
-      <Label alignment="CENTER" layoutY="-5.0" prefHeight="82.0" prefWidth="464.0" text="Customer Form">
+      <Label alignment="CENTER" layoutY="-5.0" prefHeight="82.0" prefWidth="588.0" text="Customer Form">
          <font>
             <Font size="38.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="33.0" layoutY="149.0" onAction="#txtNameOnAction" prefHeight="31.0" prefWidth="370.0" promptText="Name" />
-      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="33.0" layoutY="223.0" onAction="#txtContactOnAction" prefHeight="31.0" prefWidth="370.0" promptText="Contact" />
-      <JFXTextField fx:id="txtAddress" layoutX="33.0" layoutY="304.0" onAction="#txtContactOnAction" prefHeight="31.0" prefWidth="370.0" promptText="Address" />
-      <JFXButton fx:id="btnSave" layoutX="311.0" layoutY="401.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #2ecc71;" text="Save" />
-      <TableView layoutX="440.0" layoutY="139.0" prefHeight="306.0" prefWidth="644.0">
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="43.0" layoutY="149.0" onAction="#txtNameOnAction" prefHeight="31.0" prefWidth="595.0" promptText="Name" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="43.0" />
+      <JFXTextField fx:id="txtContact" labelFloat="true" layoutX="33.0" layoutY="223.0" onAction="#txtContactOnAction" prefHeight="31.0" prefWidth="595.0" promptText="Contact" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="43.0" />
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="33.0" layoutY="304.0" onAction="#txtContactOnAction" prefHeight="31.0" prefWidth="595.0" promptText="Address" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="43.0" />
+      <JFXButton fx:id="btnSave" layoutX="514.0" layoutY="367.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: #2ecc71;" text="Save" />
+      <TableView fx:id="tblCustomer" layoutX="14.0" layoutY="417.0" prefHeight="306.0" prefWidth="635.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="417.0">
         <columns>
-          <TableColumn prefWidth="68.0" text="ID" />
-          <TableColumn prefWidth="149.0" text="Name" />
-            <TableColumn prefWidth="138.0" text="Contact" />
-            <TableColumn prefWidth="181.0" text="Address" />
-            <TableColumn prefWidth="107.0" text="Status" />
+          <TableColumn fx:id="colID" prefWidth="68.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="149.0" text="Name" />
+            <TableColumn fx:id="colContact" prefWidth="138.0" text="Contact" />
+            <TableColumn fx:id="colAddress" prefWidth="181.0" text="Address" />
+            <TableColumn fx:id="colStatus" prefWidth="107.0" text="Status" />
         </columns>
       </TableView>
-      <JFXTextField fx:id="txtSearch" labelFloat="true" layoutX="793.0" layoutY="86.0" onAction="#txtSearchOnAction" prefHeight="31.0" prefWidth="291.0" promptText="Search" />
-      <JFXTextField fx:id="txtID" labelFloat="true" layoutX="33.0" layoutY="102.0" onAction="#txtIDOnAction" prefHeight="31.0" prefWidth="138.0" promptText="ID" />
+      <JFXTextField fx:id="txtID" labelFloat="true" layoutX="43.0" layoutY="89.0" onAction="#txtIDOnAction" prefHeight="31.0" prefWidth="138.0" promptText="ID" />
    </children>
 </AnchorPane>

@@ -20,6 +20,8 @@ public class BOFactory {
                 return (T) new CustomerBOImpl();
             case ITEM:
                 return (T) new ItemBOImpl();
+            case ORDERS:
+                return (T) new ItemBOImpl();
             default:
                 return null;
         }

@@ -2,6 +2,7 @@ package lk.ijse.thogakade;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -15,8 +16,10 @@ public class AppInitilizer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        primaryStage.setScene(new Scene(FXMLLoader.load(this.getClass().getResource("view/Item.fxml"))));
-        primaryStage.setTitle("Customer Form");
+        Parent root = FXMLLoader.load(this.getClass().getResource("view/DashBorad.fxml"));
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
+        primaryStage.centerOnScreen();
         primaryStage.show();
     }
 }
