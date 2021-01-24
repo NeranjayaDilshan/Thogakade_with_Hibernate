@@ -1,11 +1,13 @@
 package lk.ijse.thogakade.dao.custom.impl;
 
 import lk.ijse.thogakade.dao.custom.ItemDAO;
+import lk.ijse.thogakade.entity.Customer;
 import lk.ijse.thogakade.entity.Item;
 import lk.ijse.thogakade.util.FactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.persistence.Query;
 import java.util.List;
 
 public class ItemDAOImpl implements ItemDAO {
@@ -58,6 +60,12 @@ public class ItemDAOImpl implements ItemDAO {
 
     @Override
     public List<Item> getAll() throws Exception {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Query query = session.createQuery("from Item");
+        List<Item> list = query.getResultList();
+        for (Item item : list) {
+            System.out.println(item);
+        }
+        return list;
     }
 }

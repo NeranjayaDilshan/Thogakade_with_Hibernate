@@ -24,13 +24,9 @@ public class CustomerDAOImpl implements CustomerDAO {
     @Override
     public boolean delete(String id) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
-
         Transaction transaction = session.beginTransaction();
-
         session.delete(id);
-
         transaction.commit();
-
         session.close();
         return true;
     }
@@ -38,13 +34,9 @@ public class CustomerDAOImpl implements CustomerDAO {
     @Override
     public boolean update(Customer customer) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
-
         Transaction transaction = session.beginTransaction();
-
         session.update(customer);
-
         transaction.commit();
-
         session.close();
         return true;
     }

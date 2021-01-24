@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="764.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.thogakade.controller.ItemController">
    <children>
       <Label alignment="CENTER" layoutX="10.0" layoutY="5.0" prefHeight="82.0" prefWidth="464.0" text="Item Form">
@@ -21,13 +20,13 @@
       <JFXTextField fx:id="txtQtyOnHand" layoutX="33.0" layoutY="318.0" onAction="#txtQtyOnHandOnAction" prefHeight="31.0" prefWidth="479.0" promptText="Qty On Hand" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="43.0" />
       <JFXTextField fx:id="txtItemName" labelFloat="true" layoutX="33.0" layoutY="183.0" onAction="#txtItemNameOnAction" prefHeight="31.0" prefWidth="479.0" promptText="Item Name" AnchorPane.leftAnchor="43.0" AnchorPane.rightAnchor="43.0" />
       <JFXButton fx:id="btnSave" layoutX="550.0" layoutY="373.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="79.0" style="-fx-background-color: #2ecc71;" text="Save" />
-      <TableView layoutX="14.0" layoutY="421.0" prefHeight="328.0" prefWidth="556.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="421.0">
+      <TableView fx:id="tblItem" layoutX="14.0" layoutY="421.0" prefHeight="328.0" prefWidth="556.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="421.0">
         <columns>
-          <TableColumn prefWidth="105.0" text="Item Code" />
-          <TableColumn prefWidth="158.0" text="Item Name" />
-            <TableColumn prefWidth="142.0" text="Unit price" />
-            <TableColumn prefWidth="140.0" text="Qty On Hand" />
-            <TableColumn prefWidth="110.0" text="Status" />
+          <TableColumn fx:id="colID" prefWidth="105.0" text="Item Code" />
+          <TableColumn fx:id="colName" prefWidth="158.0" text="Item Name" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="142.0" text="Unit price" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="140.0" text="Qty On Hand" />
+            <TableColumn fx:id="colStatus" prefWidth="110.0" text="Status" />
         </columns>
       </TableView>
    </children>
