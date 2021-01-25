@@ -36,5 +36,10 @@ public class ItemBOImpl implements ItemBO {
         }
         return itemDTOS;
     }
+
+    @Override
+    public Item search(String itemCode) throws Exception {
+        return itemDAO.search(itemCode);
+    }
 }
 

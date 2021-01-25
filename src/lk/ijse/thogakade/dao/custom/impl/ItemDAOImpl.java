@@ -1,7 +1,6 @@
 package lk.ijse.thogakade.dao.custom.impl;
 
 import lk.ijse.thogakade.dao.custom.ItemDAO;
-import lk.ijse.thogakade.entity.Customer;
 import lk.ijse.thogakade.entity.Item;
 import lk.ijse.thogakade.util.FactoryConfiguration;
 import org.hibernate.Session;
@@ -55,7 +54,13 @@ public class ItemDAOImpl implements ItemDAO {
 
     @Override
     public Item search(String s) throws Exception {
-        return null;
+        System.out.println("s at impl : " + s);
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Query query = session.createQuery("from Item where itemCode = ?1");
+        query.setParameter(1, s);
+        Item item = (Item) query.getSingleResult();
+        System.out.println(item);
+        return item;
     }
 
     @Override

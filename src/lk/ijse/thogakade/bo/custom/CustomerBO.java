@@ -8,5 +8,7 @@ import java.util.ArrayList;
 public interface CustomerBO extends SuperBO {
     boolean addCustomer(CustomerDTO customer) throws Exception;
 
-        ArrayList<CustomerDTO> getAllCustomer() throws Exception;
+    ArrayList<CustomerDTO> getAllCustomer() throws Exception;
+
+    boolean delectCustomer(String id) throws Exception;
 }

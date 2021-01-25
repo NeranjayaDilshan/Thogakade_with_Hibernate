@@ -9,16 +9,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="764.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.thogakade.controller.OrderController">
    <children>
       <TableView fx:id="tblOrders" layoutX="18.0" layoutY="400.0" prefHeight="255.0" prefWidth="655.0">
          <columns>
             <TableColumn fx:id="colItemCode" prefWidth="87.0" text="itemCode" />
-            <TableColumn fx:id="colItemName" prefWidth="167.0" text="Item Name" />
-            <TableColumn fx:id="colUnitPrice" prefWidth="160.0" text="Unit Price" />
-            <TableColumn fx:id="colQty" prefWidth="124.0" text="Qty" />
-            <TableColumn fx:id="colStatus" prefWidth="116.0" text="Status" />
+            <TableColumn fx:id="colItemName" prefWidth="121.0" text="Item Name" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="120.0" text="Unit Price" />
+            <TableColumn fx:id="colQty" prefWidth="98.0" text="Qty" />
+            <TableColumn fx:id="colTotal" prefWidth="135.0" text="Total" />
+            <TableColumn fx:id="colStatus" prefWidth="93.0" text="Status" />
          </columns>
       </TableView>
       <JFXComboBox fx:id="lblCustId" labelFloat="true" layoutX="26.0" layoutY="133.0" onAction="#lblCustIdOnAction" prefHeight="31.0" prefWidth="194.0" promptText="Customer ID" />
@@ -34,5 +34,7 @@
             <Font size="43.0" />
          </font>
       </Label>
+      <Label fx:id="lblTotal" layoutX="273.0" layoutY="700.0" prefHeight="21.0" prefWidth="203.0" />
+      <JFXTextField fx:id="txtOrderID" labelFloat="true" layoutX="503.0" layoutY="118.0" promptText="Order ID" />
    </children>
 </AnchorPane>

@@ -1,16 +1,16 @@
 package lk.ijse.thogakade.dao.custom.impl;
 
-import lk.ijse.thogakade.dao.custom.OrdersDAO;
-import lk.ijse.thogakade.entity.Orders;
+import lk.ijse.thogakade.dao.custom.OrderDetailDAO;
+import lk.ijse.thogakade.entity.OrderDetails;
 import lk.ijse.thogakade.util.FactoryConfiguration;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class OrdersDAOImpl implements OrdersDAO {
+public class OrderDetailDAOImpl implements OrderDetailDAO {
     @Override
-    public boolean add(Orders entity) throws Exception {
+    public boolean add(OrderDetails entity) throws Exception {
         Session session = FactoryConfiguration.getInstance().getSession();
 
         Transaction transaction = session.beginTransaction();
@@ -29,17 +29,17 @@ public class OrdersDAOImpl implements OrdersDAO {
     }
 
     @Override
-    public boolean update(Orders entity) throws Exception {
+    public boolean update(OrderDetails entity) throws Exception {
         return false;
     }
 
     @Override
-    public Orders search(String s) throws Exception {
+    public OrderDetails search(String s) throws Exception {
         return null;
     }
 
     @Override
-    public List<Orders> getAll() throws Exception {
+    public List<OrderDetails> getAll() throws Exception {
         return null;
     }
 }

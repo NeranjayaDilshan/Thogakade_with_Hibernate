@@ -2,8 +2,10 @@ package lk.ijse.thogakade.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Orders implements SuperEntity {
@@ -12,11 +14,25 @@ public class Orders implements SuperEntity {
     private Date date;
     @ManyToOne
     private Customer customer;
+    @ManyToMany
+    private List<Item> items;
 
     public Orders(String orderId, Date date, Customer customer) {
         this.orderId = orderId;
         this.date = date;
         this.customer = customer;
+    }
+
+    public Orders(String orderId, Date date) {
+        this.orderId = orderId;
+        this.date = date;
+    }
+
+    public Orders(String orderId, Date date, Customer customer, List<Item> items) {
+        this.orderId = orderId;
+        this.date = date;
+        this.customer = customer;
+        this.items = items;
     }
 
     public Orders() {
@@ -46,12 +62,21 @@ public class Orders implements SuperEntity {
         this.customer = customer;
     }
 
-    @Override
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
+
+    /*@Override
     public String toString() {
         return "Orders{" +
                 "orderId='" + orderId + '\'' +
                 ", date=" + date +
                 ", customer=" + customer +
+                ", items=" + items +
                 '}';
-    }
+    }*/
 }
